@@ -11,6 +11,16 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/test', methods=['GET'])
+def getResult():
+    input = np.array([1,1,0,1,1,0,1]).reshape(1, 80)
+    
+    # prediction
+    result = 1
+
+    result = 'Procede Credito' if result[0] == 1 else 'No apto'
+
+    return render_template('index.html', result=result)
 
 
 @app.route('/predict', methods=['POST'])
@@ -23,7 +33,7 @@ def predict_placement():
     result = model.predict(
         np.array([AMT_INCOME_TOTAL, AMT_CREDT, NAME_INCOME]).reshape(1, 3))
 
-    result = 'placed' if result[0] == 1 else 'not placed'
+    result = 'Procede Credito' if result[0] == 1 else 'No apto'
 
     return render_template('index.html', result=result)
 
