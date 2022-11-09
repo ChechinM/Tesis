@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tesis II</title>
+</head>
+<body>
+
+    <h1>Tesis II</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="post" action="/predict">
+        <label>AMT_INCOME_TOTAL</label><br>
+        <input type="text" name="AMT_INCOME_TOTAL"><br><br>
+
+        <label>AMT_CREDT</label><br>
+        <input type="text" name="AMT_CREDT"><br><br>
+
+        <label>NAME_INCOME</label><br>
+        <input type="text" name="NAME_INCOME"><br><br>
+
+        <label>NAME_EDUCATION</label><br>
+        <input type="text" name="NAME_EDUCATION"><br><br>
+
+        <label>TERM_MONTH</label><br>
+        <input type="text" name="TERM_MONTH"><br><br>
+
+        <label>CNT_CHILDRE</label><br>
+        <input type="text" name="CNT_CHILDRE"><br><br>
+
+        <label>AGE</label><br>
+        <input type="text" name="AGE"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+</body>
+</html>
