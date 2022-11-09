@@ -13,12 +13,8 @@ def index():
 
 @app.route('/test', methods=['GET'])
 def getResult():
-    input = np.array([1,1,0,1,1,0,1]).reshape(1, 80)
-    
-    # prediction
-    result = 1
 
-    result = 'Procede Credito' if result[0] == 1 else 'No apto'
+    result = 'Procede Credito' 
 
     return render_template('index.html', result=result)
 
