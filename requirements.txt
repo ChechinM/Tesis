@@ -1,0 +1,6 @@
+flask
+waitress
+pickle
+numpy
+pandas
+sklearn

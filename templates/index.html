@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TESIS II</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+    <div class="theme-switch-wrapper">
+        <span id="toggle-icon">
+            <span class="toggle-text">Light Mode</span>
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <!-- Navigation -->
+    <nav id="nav">
+        <a href="#home">HOME</a>
+        <a href="#project">PROJECT</a>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+        <div class="title-group">
+            <h1>TESIS II</h1>
+            <h2>BIENVENIDO AL SITIO DE IMPLEMENTACIÓN!</h2>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Tesis II</h2>
+
+            <form method="post" action="/predict" class="contact__form grid">
+                <label>AMT_INCOME_TOTAL</label><br />
+                <input type="text" name="AMT_INCOME_TOTAL" required="required" /><br /><br />
+
+                <label>AMT_CREDT</label><br />
+                <input type="text" name="AMT_CREDT" required="required" /><br /><br />
+
+                <label>NAME_INCOME</label><br />
+                <input type="text" name="NAME_INCOME" required="required" /><br /><br />
+
+                <label>NAME_EDUCATION</label><br />
+                <input type="text" name="NAME_EDUCATION" required="required" /><br /><br />
+
+                <label>TERM_MONTH</label><br />
+                <input type="text" name="TERM_MONTH" required="required" /><br /><br />
+
+                <label>CNT_CHILDRE</label><br />
+                <input type="text" name="CNT_CHILDRE" required="required" /><br /><br />
+
+                <label>AGE</label><br />
+                <input type="text" name="AGE" required="required" /><br /><br />
+
+                <input type="submit" class="buttons" value="Predict" /><br /><br />
+            </form>
+
+            {% if result %}
+            <p>{{ result }}</p>
+            {% endif %}
+    </section>
+    <!-- Script -->
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
